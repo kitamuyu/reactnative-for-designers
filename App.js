@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import styled from "styled-components";
+import Card from "./components/Card";
 
 export default class App extends React.Component {
   render() {
@@ -11,10 +12,21 @@ export default class App extends React.Component {
           <Title>Welcome back,</Title>
           <Name>Meng</Name>
         </TitleBar>
+        <Subtitle>Continue Learning</Subtitle>
+        <Card />
       </Container>
     );
   }
 }
+
+const Subtitle = styled.Text`
+  color: #b8bece;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 50px;
+  text-transform: uppercase;
+`;
 
 const Avatar = styled.Image`
   width: 44px;
