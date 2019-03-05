@@ -28,12 +28,11 @@ export default class App extends React.Component {
                 paddingTop: 30
               }}
               horizontal={true}
+              showsHorizontalScrollIndicator={false}
             >
-              <Logo
-                image={require("./assets/logo-framerx.png")}
-                text="Framer X"
-              />
-              <Logo image={require("./assets/logo-figma.png")} text="Figma" />
+              {logos.map((logo, index) => (
+                <Logo key={index} image={logo.image} text={logo.text} />
+              ))}
             </ScrollView>
             <Subtitle>Continue Learning</Subtitle>
             <ScrollView
@@ -105,3 +104,30 @@ const TitleBar = styled.View`
   margin-top: 50px;
   padding-left: 80px;
 `;
+
+const logos = [
+  {
+    image: require("./assets/logo-framerx.png"),
+    text: "Framer X"
+  },
+  {
+    image: require("./assets/logo-figma.png"),
+    text: "Figma"
+  },
+  {
+    image: require("./assets/logo-studio.png"),
+    text: "Studio"
+  },
+  {
+    image: require("./assets/logo-react.png"),
+    text: "React"
+  },
+  {
+    image: require("./assets/logo-swift.png"),
+    text: "Swift"
+  },
+  {
+    image: require("./assets/logo-sketch.png"),
+    text: "sketch"
+  }
+];
