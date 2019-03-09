@@ -6,6 +6,8 @@ import {
 import HomeScreen from "../screens/HomeScreen";
 import SectionScreen from "../screens/SectionScreen";
 import { Icon } from "expo";
+import CoursesScreen from "../screens/CoursesScreen";
+import ProjectsScreen from "../screens/ProjectsScreen";
 
 const activeColor = "#4775f2";
 const inactiveColor = "#b8bece";
@@ -37,11 +39,11 @@ HomeStack.navigationOptions = ({ navigation }) => {
 };
 
 const CoursesStack = createStackNavigator({
-  Courses: SectionScreen
+  Courses: CoursesScreen
 });
 
 CoursesStack.navigationOptions = {
-  tabBarLabel: "Course",
+  tabBarLabel: "Courses",
   tabBarIcon: ({ focused }) => (
     <Icon.Ionicons
       name="ios-albums"
@@ -52,7 +54,7 @@ CoursesStack.navigationOptions = {
 };
 
 const ProjectsStack = createStackNavigator({
-  Projects: SectionScreen
+  Projects: ProjectsScreen
 });
 
 ProjectsStack.navigationOptions = {
