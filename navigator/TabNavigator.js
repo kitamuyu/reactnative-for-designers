@@ -25,6 +25,12 @@ const HomeStack = createStackNavigator(
 HomeStack.navigationOptions = ({ navigation }) => {
   var tabBarVisible = true;
 
+  const routeName = navigation.state.routes[navigation.state.index].routeName;
+
+  if (routeName == "Section") {
+    tabBarVisible = false;
+  }
+
   return {
     tabBarVisible,
     tabBarLabel: "Home",
